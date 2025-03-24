@@ -1,7 +1,6 @@
 ﻿# You can place the script of your game in this file.
 
 # Declare images below this line, using the image statement.
-image BG Black = "BlackBG.png"
 image movie = Movie(size=(1280, 720), xpos=0, ypos=0, xanchor=0, yanchor=0)
 image BadEnd = "Bad End.png"
 image GoodEnd = "Good End.png"
@@ -34,14 +33,14 @@ label start:
 
     play music "Relaxing Music - Winter Breath.mp3"
 
-    scene BG Black
+    scene black
     with fade
 
     "I sent the text to my friend, Max."
 
     $ renpy.movie_cutscene("video/Introphonefinal.mp4", delay=None, loops=0, stop_music=False)
 
-    scene BG Black
+    scene black
     with fade
 
     "The bus was already 20 minutes late."

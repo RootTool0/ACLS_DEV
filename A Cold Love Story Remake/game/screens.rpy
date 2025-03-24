@@ -13,8 +13,6 @@ style default:
     properties gui.text_properties()
     language gui.language
 
-style image:
-    fit "fill"
 
 style input:
     properties gui.text_properties("input", accent=True)
@@ -355,7 +353,8 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add gui.main_menu_background
+    add gui.main_menu_background:
+        xysize (1920, 1080)
 
     ## This empty frame darkens the main menu.
     frame:
@@ -384,9 +383,8 @@ style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
 
 style main_menu_frame:
-    xsize 420
+    xfill True
     yfill True
-
     background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
@@ -420,7 +418,8 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
     style_prefix "game_menu"
 
     if main_menu:
-        add gui.main_menu_background
+        add gui.main_menu_background:
+            xysize (1920, 1080)
     else:
         add gui.game_menu_background
 

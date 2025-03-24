@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 17: style property fit is not known.
-    fit "fill"
-       ^
+File "game/screens.rpy", line 357: 'xfill' is not a keyword argument or valid child of the add statement.
+    xfill True
+         ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Mon Mar 24 19:57:02 2025
+Mon Mar 24 20:20:14 2025
