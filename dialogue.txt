@@ -1,94 +1,3 @@
-A Cold Love Story Remake
-Back
-History
-Skip
-Auto
-Save
-Q.Save
-Q.Load
-Prefs
-Start
-Load
-Preferences
-End Replay
-Main Menu
-About
-Help
-Quit
-Return
-Version [config.version!t]
-
-Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].
-
-[renpy.license!t]
-Page {}
-Automatic saves
-Quick saves
-{#file_time}%A, %B %d %Y, %H:%M
-empty slot
-<
-{#auto_page}A
-{#quick_page}Q
->
-Upload Sync
-Download Sync
-Display
-Window
-Fullscreen
-Unseen Text
-After Choices
-Transitions
-Text Speed
-Auto-Forward Time
-Music Volume
-Sound Volume
-Test
-Voice Volume
-Mute All
-English
-Русский
-The dialogue history is empty.
-Keyboard
-Mouse
-Gamepad
-Enter
-Advances dialogue and activates the interface.
-Space
-Advances dialogue without selecting choices.
-Arrow Keys
-Navigate the interface.
-Escape
-Accesses the game menu.
-Ctrl
-Skips dialogue while held down.
-Tab
-Toggles dialogue skipping.
-Page Up
-Rolls back to earlier dialogue.
-Page Down
-Rolls forward to later dialogue.
-Hides the user interface.
-Takes a screenshot.
-Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.
-Opens the accessibility menu.
-Left Click
-Middle Click
-Right Click
-Mouse Wheel Up
-Mouse Wheel Down
-Right Trigger
-A/Bottom Button
-Left Trigger
-Left Shoulder
-Right Shoulder
-D-Pad, Sticks
-Start, Guide, B/Right Button
-Y/Top Button
-Calibrate
-Yes
-No
-Skipping
-Menu
 I sent the text to my friend, Max.
 The bus was already 20 minutes late.
 It was late November . . . and it was cold.
@@ -1411,3 +1320,7 @@ Go inside
 >>Final Backstory<<
 I wont leave you
 I have to turn you in
+John
+Sarah
+Reporter
+Officer

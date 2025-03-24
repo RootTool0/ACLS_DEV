@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 357: 'xfill' is not a keyword argument or valid child of the add statement.
-    xfill True
-         ^
+File "game/script.rpy", line 7: invalid syntax
+    "Transform(You Are Dead.png", zoom=1.5)
+                                       ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Mon Mar 24 20:20:14 2025
+Mon Mar 24 23:17:13 2025

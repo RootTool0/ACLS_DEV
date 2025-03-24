@@ -1,10 +1,10 @@
 ﻿# You can place the script of your game in this file.
 
 # Declare images below this line, using the image statement.
-image movie = Movie(size=(1280, 720), xpos=0, ypos=0, xanchor=0, yanchor=0)
-image BadEnd = "Bad End.png"
-image GoodEnd = "Good End.png"
-image YouAreDead = "You Are Dead.png"
+image movie = Movie(size=(1920, 1080), fit="fill", align=(0.5, 0.5))
+image BadEnd = Transform("Bad End.png", zoom=1.5)
+image GoodEnd = Transform("Good End.png", zoom=1.5)
+image YouAreDead = Transform("You Are Dead.png", zoom=1.5)
 
 # Declare characters used by this game.
 define e = Character('John', color="#c8ffc8")
@@ -46,7 +46,6 @@ label start:
     "The bus was already 20 minutes late."
 
     "It was late November . . . and it was cold."
-
     play movie "video/Frozenbg.mp4" loop
     show movie with dissolve
 
@@ -1122,7 +1121,7 @@ label phonemenu:
 
             e "Uhh . . . er . . ."
 
-            s "Open"
+            s "Open-"
 
             s "It."
 

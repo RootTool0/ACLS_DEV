@@ -1,76 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-Exception: Unknown language: None
+  File "game/options.rpy", line 45, in script
+    define config.allow_duplicate_translations = True
+  File "renpy/common/000namespaces.rpy", line 34, in set
+    setattr(self.nso, name, value)
+Exception: config.allow_duplicate_translations is not a known configuration variable.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
-  File "D:\renpy-8.3.7\renpy\ast.py", line 834, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\renpy-8.3.7\renpy\python.py", line 1187, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
-    python hide:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
-    ui.interact()
-  File "D:\renpy-8.3.7\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "D:\renpy-8.3.7\renpy\display\core.py", line 2218, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "D:\renpy-8.3.7\renpy\display\core.py", line 2882, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "D:\renpy-8.3.7\renpy\display\core.py", line 1384, in draw_screen
-    surftree = renpy.display.render.render_screen(
-  File "render.pyx", line 486, in renpy.display.render.render_screen
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "D:\renpy-8.3.7\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "D:\renpy-8.3.7\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "D:\renpy-8.3.7\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "D:\renpy-8.3.7\renpy\display\screen.py", line 755, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "D:\renpy-8.3.7\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "D:\renpy-8.3.7\renpy\display\layout.py", line 1171, in render
-    surf = render(d, width - x, rh, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "D:\renpy-8.3.7\renpy\display\behavior.py", line 976, in render
-    rv = super(Button, self).render(width, height, st, at)
-  File "D:\renpy-8.3.7\renpy\display\layout.py", line 1409, in render
-    xminimum = max(xminimum, size_groups[size_group].width(width, height, st, at))
-  File "D:\renpy-8.3.7\renpy\display\layout.py", line 1346, in width
-    rend = renpy.display.render.render_for_size(i, width, height, st, at)
-  File "render.pyx", line 312, in renpy.display.render.render_for_size
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "D:\renpy-8.3.7\renpy\display\behavior.py", line 976, in render
-    rv = super(Button, self).render(width, height, st, at)
-  File "D:\renpy-8.3.7\renpy\display\layout.py", line 1457, in render
-    surf = render(child,
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "D:\renpy-8.3.7\renpy\text\text.py", line 2627, in render
-    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
-  File "D:\renpy-8.3.7\renpy\text\text.py", line 817, in __init__
-    raise Exception("Unknown language: {0}".format(language))
-Exception: Unknown language: None
+  File "game/options.rpy", line 45, in script
+    define config.allow_duplicate_translations = True
+  File "D:\renpy-8.3.7\renpy\ast.py", line 2248, in execute
+    self.set()
+  File "D:\renpy-8.3.7\renpy\ast.py", line 2266, in set
+    ns.set(self.varname, value)
+  File "renpy/common/000namespaces.rpy", line 34, in set
+    setattr(self.nso, name, value)
+  File "D:\renpy-8.3.7\renpy\defaultstore.py", line 101, in __setattr__
+    raise Exception('config.%s is not a known configuration variable.' % (name))
+Exception: config.allow_duplicate_translations is not a known configuration variable.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.7.25031702
 A Cold Love Story Remake 1.0
-Mon Mar 24 19:31:33 2025
+Mon Mar 24 23:18:58 2025

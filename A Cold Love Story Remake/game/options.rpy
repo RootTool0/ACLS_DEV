@@ -9,12 +9,12 @@ define gui.about = _p("""
 """)
 
 
-define build.name = "A Cold Love Story Remake"
-
+define build.name = "AColdLoveStoryRemake"
+define build.version = "1.0"
 
 define config.has_sound = True
 define config.has_music = True
-define config.has_voice = True
+define config.has_voice = False
 
 
 define config.enter_transition = dissolve
@@ -39,7 +39,7 @@ default preferences.text_cps = 0
 
 default preferences.afm_time = 15
 
-define config.save_directory = "ACLS-1742831320"
+define config.save_directory = "AColdLoveStoryRemake-1742831320"
 
 define config.window_icon = "gui/window_icon.png"
 
