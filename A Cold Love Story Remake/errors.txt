@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 7: invalid syntax
-    "Transform(You Are Dead.png", zoom=1.5)
-                                       ^
+File "game/screens.rpy", line 332: expected a keyword argument, colon, or end of line.
+    textbutton _("Quit") action gui.gui.main_menu_background = Movie(play = "video/Sarah2 Smilefinal.mp4", loop = True, size = (1920, 1080)) 
+                                                             ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Mon Mar 24 23:17:13 2025
+Mon Jun 30 18:21:13 2025

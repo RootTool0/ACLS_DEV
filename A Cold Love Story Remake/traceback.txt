@@ -1,28 +1,58 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/options.rpy", line 45, in script
-    define config.allow_duplicate_translations = True
-  File "renpy/common/000namespaces.rpy", line 34, in set
-    setattr(self.nso, name, value)
-Exception: config.allow_duplicate_translations is not a known configuration variable.
+  File "renpy/common/00action_other.rpy", line 619, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/screens.rpy", line 332, in <lambda>
+    textbutton _("Quit") action [Function(lambda: setattr(renpy.stored.main_menu_background, Movie(play="video/Sarah2 Smilefinal.mp4", loop=True, size=(1920, 1080))))] # , Pause(1.0), Quit(confirm=not main_menu)
+AttributeError: module 'renpy.exports' has no attribute 'stored'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/options.rpy", line 45, in script
-    define config.allow_duplicate_translations = True
-  File "D:\renpy-8.3.7\renpy\ast.py", line 2248, in execute
-    self.set()
-  File "D:\renpy-8.3.7\renpy\ast.py", line 2266, in set
-    ns.set(self.varname, value)
-  File "renpy/common/000namespaces.rpy", line 34, in set
-    setattr(self.nso, name, value)
-  File "D:\renpy-8.3.7\renpy\defaultstore.py", line 101, in __setattr__
-    raise Exception('config.%s is not a known configuration variable.' % (name))
-Exception: config.allow_duplicate_translations is not a known configuration variable.
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "D:\renpy-8.3.7\renpy\ast.py", line 834, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\renpy-8.3.7\renpy\python.py", line 1187, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+  File "D:\renpy-8.3.7\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\renpy-8.3.7\renpy\display\core.py", line 2218, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "D:\renpy-8.3.7\renpy\display\core.py", line 3289, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "D:\renpy-8.3.7\renpy\display\layout.py", line 1297, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\renpy-8.3.7\renpy\display\layout.py", line 1297, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\renpy-8.3.7\renpy\display\layout.py", line 1297, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\renpy-8.3.7\renpy\display\screen.py", line 794, in event
+    rv = self.child.event(ev, x, y, st)
+  File "D:\renpy-8.3.7\renpy\display\layout.py", line 1297, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\renpy-8.3.7\renpy\display\layout.py", line 1297, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\renpy-8.3.7\renpy\display\behavior.py", line 1182, in event
+    return handle_click(self.clicked)
+  File "D:\renpy-8.3.7\renpy\display\behavior.py", line 1103, in handle_click
+    rv = run(action)
+  File "D:\renpy-8.3.7\renpy\display\behavior.py", line 394, in run
+    new_rv = run(i, *args, **kwargs)
+  File "D:\renpy-8.3.7\renpy\display\behavior.py", line 401, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_other.rpy", line 619, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/screens.rpy", line 332, in <lambda>
+    textbutton _("Quit") action [Function(lambda: setattr(renpy.stored.main_menu_background, Movie(play="video/Sarah2 Smilefinal.mp4", loop=True, size=(1920, 1080))))] # , Pause(1.0), Quit(confirm=not main_menu)
+AttributeError: module 'renpy.exports' has no attribute 'stored'
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.7.25031702
 A Cold Love Story Remake 1.0
-Mon Mar 24 23:18:58 2025
+Mon Jun 30 18:24:24 2025

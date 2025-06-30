@@ -330,7 +330,6 @@ screen navigation():
             ## Web.
             textbutton _("Quit") action Quit(confirm=not main_menu)
 
-
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
 
