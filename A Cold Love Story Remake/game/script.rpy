@@ -1716,69 +1716,69 @@ label console:
     s "Thank you."
 
     menu:
+    
+        ">>Backstory<<":
 
-          ">>Backstory<<":
+            $ backstory = "onecomplete"
 
-              $ backstory = "onecomplete"
+            e "Hey, Sarah?"
 
-              e "Hey, Sarah?"
+            s "Yeah?"
 
-              s "Yeah?"
+            e ". . . could you maybe tell me a little about yourself?"
 
-              e ". . . could you maybe tell me a little about yourself?"
+            s ". . . what?"
 
-              s ". . . what?"
+            e ". . . . . . . . . ."
 
-              e ". . . . . . . . . ."
+            e "You don't have to . . ."
 
-              e "You don't have to . . ."
+            e "But I just want to maybe . . ."
 
-              e "But I just want to maybe . . ."
+            e ". . . know a little more about you . . ."
 
-              e ". . . know a little more about you . . ."
+            e "Er . . . I guess."
 
-              e "Er . . . I guess."
+            s ". . . . . . . . . ."
 
-              s ". . . . . . . . . ."
+            s "Okay, John."
 
-              s "Okay, John."
+            s ". . . . I don't like talking about . . ."
 
-              s ". . . . I don't like talking about . . ."
+            s ". . . it . . ."
 
-              s ". . . it . . ."
+            s "But I can give you some drawings . . ."
 
-              s "But I can give you some drawings . . ."
+            s ". . . I'm not very good."
 
-              s ". . . I'm not very good."
+            s "Promise me you wont look at them until later?"
 
-              s "Promise me you wont look at them until later?"
+            hide movie with fade
+            stop movie
 
-              hide movie with fade
-              stop movie
+            stop music fadeout 2
 
-              stop music fadeout 2
+            e ". . . I promise."
 
-              e ". . . I promise."
+            play movie "video/A Cold Love Story Backstory Final 1.mp4"
+            $ renpy.pause(10, hard=True)
+            pause 135
+            stop movie
 
-              play movie "video/A Cold Love Story Backstory Final 1.mp4"
-              $ renpy.pause(10, hard=True)
-              pause 135
-              stop movie
+            play music "Relaxing Music - Winter Breath.mp3"
 
-              play music "Relaxing Music - Winter Breath.mp3"
+            play movie "video/Blanksnowfinal.mp4" loop
+            show movie with fade
 
-              play movie "video/Blanksnowfinal.mp4" loop
-              show movie with fade
+            e "Okay, Sarah, I'll just put these in my backpack for now."
 
-              e "Okay, Sarah, I'll just put these in my backpack for now."
+            e ". . . I'll look at them later."
 
-              e ". . . I'll look at them later."
+            s ". . . . . . . ."
 
-              s ". . . . . . . ."
+            s "Thank you, John."
 
-              s "Thank you, John."
-
-              jump fronter
+            jump fronter
 
 label fronter:
 

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 332: expected a keyword argument, colon, or end of line.
-    textbutton _("Quit") action gui.gui.main_menu_background = Movie(play = "video/Sarah2 Smilefinal.mp4", loop = True, size = (1920, 1080)) 
-                                                             ^
+File "game/screens.rpy", line 407: style property s is not known.
+    kerning 10s
+               ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Mon Jun 30 18:21:13 2025
+Mon Jun 30 22:42:09 2025

@@ -1,58 +1,59 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "renpy/common/00action_other.rpy", line 619, in __call__
-    rv = self.callable(*self.args, **self.kwargs)
-  File "game/screens.rpy", line 332, in <lambda>
-    textbutton _("Quit") action [Function(lambda: setattr(renpy.stored.main_menu_background, Movie(play="video/Sarah2 Smilefinal.mp4", loop=True, size=(1920, 1080))))] # , Pause(1.0), Quit(confirm=not main_menu)
-AttributeError: module 'renpy.exports' has no attribute 'stored'
+While processing the align property of style main_menu_title:
+  File "renpy/common/00start.rpy", line 201, in script
+    python:
+  File "renpy/common/00start.rpy", line 201, in script
+    python:
+  File "renpy/common/00start.rpy", line 202, in <module>
+    _init_language()
+  File "renpy/common/00start.rpy", line 83, in _init_language
+    renpy.change_language(language, force=True)
+  File "renpy/common/00stylepreferences.rpy", line 127, in _m1_00stylepreferences__change_language
+    __update()
+  File "renpy/common/00stylepreferences.rpy", line 99, in _m1_00stylepreferences__update
+    renpy.style.rebuild()
+TypeError: 'float' object is not subscriptable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
+  File "D:\renpy-8.3.7\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "D:\renpy-8.3.7\renpy\main.py", line 652, in main
+    run(restart)
+  File "D:\renpy-8.3.7\renpy\main.py", line 148, in run
+    renpy.execution.run_context(True)
+  File "D:\renpy-8.3.7\renpy\execution.py", line 958, in run_context
+    context.run()
+  File "renpy/common/00start.rpy", line 201, in script
+    python:
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "renpy/common/00start.rpy", line 201, in script
+    python:
   File "D:\renpy-8.3.7\renpy\ast.py", line 834, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "D:\renpy-8.3.7\renpy\python.py", line 1187, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
-    python hide:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
-    ui.interact()
-  File "D:\renpy-8.3.7\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "D:\renpy-8.3.7\renpy\display\core.py", line 2218, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "D:\renpy-8.3.7\renpy\display\core.py", line 3289, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "D:\renpy-8.3.7\renpy\display\layout.py", line 1297, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "D:\renpy-8.3.7\renpy\display\layout.py", line 1297, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "D:\renpy-8.3.7\renpy\display\layout.py", line 1297, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "D:\renpy-8.3.7\renpy\display\screen.py", line 794, in event
-    rv = self.child.event(ev, x, y, st)
-  File "D:\renpy-8.3.7\renpy\display\layout.py", line 1297, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "D:\renpy-8.3.7\renpy\display\layout.py", line 1297, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "D:\renpy-8.3.7\renpy\display\behavior.py", line 1182, in event
-    return handle_click(self.clicked)
-  File "D:\renpy-8.3.7\renpy\display\behavior.py", line 1103, in handle_click
-    rv = run(action)
-  File "D:\renpy-8.3.7\renpy\display\behavior.py", line 394, in run
-    new_rv = run(i, *args, **kwargs)
-  File "D:\renpy-8.3.7\renpy\display\behavior.py", line 401, in run
-    return action(*args, **kwargs)
-  File "renpy/common/00action_other.rpy", line 619, in __call__
-    rv = self.callable(*self.args, **self.kwargs)
-  File "game/screens.rpy", line 332, in <lambda>
-    textbutton _("Quit") action [Function(lambda: setattr(renpy.stored.main_menu_background, Movie(play="video/Sarah2 Smilefinal.mp4", loop=True, size=(1920, 1080))))] # , Pause(1.0), Quit(confirm=not main_menu)
-AttributeError: module 'renpy.exports' has no attribute 'stored'
+  File "renpy/common/00start.rpy", line 202, in <module>
+    _init_language()
+  File "renpy/common/00start.rpy", line 83, in _init_language
+    renpy.change_language(language, force=True)
+  File "D:\renpy-8.3.7\renpy\translation\__init__.py", line 796, in change_language
+    i()
+  File "renpy/common/00stylepreferences.rpy", line 127, in _m1_00stylepreferences__change_language
+    __update()
+  File "renpy/common/00stylepreferences.rpy", line 99, in _m1_00stylepreferences__update
+    renpy.style.rebuild()
+  File "style.pyx", line 803, in renpy.style.rebuild
+  File "style.pyx", line 796, in renpy.style.build_styles
+  File "style.pyx", line 717, in renpy.style.build_style
+  File "style.pyx", line 714, in renpy.style.build_style
+  File "gen3-static/style_functions.pyx", line 1920, in style_functions.align_property
+  File "include/style_common.pxi", line 30, in style_functions.index_0
+TypeError: 'float' object is not subscriptable
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.7.25031702
-A Cold Love Story Remake 1.0
-Mon Jun 30 18:24:24 2025
+A Cold Love Story Remake 1.1
+Mon Jun 30 22:39:21 2025

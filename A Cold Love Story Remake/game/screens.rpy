@@ -25,21 +25,19 @@ style hyperlink_text:
 style gui_text:
     properties gui.text_properties("interface")
 
-
 style button:
     properties gui.button_properties("button")
 
 style button_text is gui_text:
     properties gui.text_properties("button")
+    xalign 0.5
     yalign 0.5
-
 
 style label_text is gui_text:
     properties gui.text_properties("label", accent=True)
 
 style prompt_text is gui_text:
     properties gui.text_properties("prompt")
-
 
 style bar:
     ysize gui.bar_size
@@ -285,27 +283,29 @@ style quick_button_text:
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
 
+#image btn_start_idle = 
+
 screen navigation():
 
     vbox:
         style_prefix "navigation"
 
         xpos gui.navigation_xpos
-        yalign 0.5
+        ypos gui.navigation_ypos
 
         spacing gui.navigation_spacing
 
         if main_menu:
-
+            
             textbutton _("Start") action Start()
-
+            
         else:
 
             textbutton _("History") action ShowMenu("history")
 
             textbutton _("Save") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        textbutton _("Load")  action ShowMenu("load")
 
         textbutton _("Preferences") action ShowMenu("preferences")
 
@@ -319,16 +319,22 @@ screen navigation():
 
         textbutton _("About") action ShowMenu("about")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        if main_menu:
 
-            ## Help isn't necessary or relevant to mobile devices.
             textbutton _("Help") action ShowMenu("help")
 
-        if renpy.variant("pc"):
+            textbutton _("Quit") action Quit()
+
+        #if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+
+            ## Help isn't necessary or relevant to mobile devices.
+            #textbutton _("Help") action ShowMenu("help")
+
+        #if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            #textbutton _("Quit") action Quit(confirm=not main_menu)
 
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
@@ -336,6 +342,10 @@ style navigation_button_text is gui_button_text
 style navigation_button:
     size_group "navigation"
     properties gui.button_properties("navigation_button")
+    background "gui/button_start/button_start_idle.png"
+    hover_background "gui/button_start/button_start_hover.png"
+    xsize 353
+    ysize 73
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
@@ -357,7 +367,9 @@ screen main_menu():
 
     ## This empty frame darkens the main menu.
     frame:
-        style "main_menu_frame"
+        xfill True
+        yfill True
+        background "gui/overlay/main_menu.png"
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
@@ -365,14 +377,11 @@ screen main_menu():
 
     if gui.show_name:
 
-        vbox:
-            style "main_menu_vbox"
+        text _("A\nCold\nLove\nStory"):
+            style "main_menu_title"
 
-            text "[config.name!t]":
-                style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
+        text _("FAN-REMAKE V") + config.version:
+            style "main_menu_version"
 
 
 style main_menu_frame is empty
@@ -380,11 +389,6 @@ style main_menu_vbox is vbox
 style main_menu_text is gui_text
 style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
-
-style main_menu_frame:
-    xfill True
-    yfill True
-    background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0
@@ -398,9 +402,15 @@ style main_menu_text:
 
 style main_menu_title:
     properties gui.text_properties("title")
+    text_align 0.0
+    xpos 324
+    ypos 36
+    kerning 14
 
 style main_menu_version:
     properties gui.text_properties("version")
+    size 36
+    kerning 8
 
 
 ## Game Menu screen ############################################################
@@ -533,7 +543,7 @@ style game_menu_label_text:
 style return_button:
     xpos gui.navigation_xpos
     yalign 1.0
-    yoffset -45
+    yoffset -5
 
 
 ## About screen ################################################################
