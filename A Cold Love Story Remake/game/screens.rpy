@@ -358,8 +358,8 @@ style navigation_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
 screen main_menu():
-
     ## This ensures that any other menu screen is replaced.
+
     tag menu
 
     add gui.main_menu_background:
@@ -382,6 +382,13 @@ screen main_menu():
 
         text _("FAN-REMAKE V") + config.version:
             style "main_menu_version"
+
+    button:
+        xysize (400, 400)
+        pos (1100, 200)
+        background "#0000"
+        action Show("easter_egg")
+        hover_sound None
 
 
 style main_menu_frame is empty
@@ -412,7 +419,26 @@ style main_menu_version:
     size 36
     kerning 8
 
+## Easter Egg screen ############################################################
 
+screen easter_egg():
+    zorder 100  # Поверх всех элементов
+    modal True  # Блокирует другие действия
+
+    add "#0008":
+        at fade_in_out
+    
+    # Воспроизводим видео
+    add Movie(size=(600, 600), pos=(1000, 100), play="video/easter_egg.webm", loop=True)
+
+    # Автоматическое закрытие через 1.5 секунды
+    timer 0.4 action Hide("easter_egg")
+
+transform fade_in_out:
+    alpha 0.0
+    linear 0.2 alpha 1.0
+    on hide:
+        linear 0.2 alpha 0.0
 ## Game Menu screen ############################################################
 ##
 ## This lays out the basic common structure of a game menu screen. It's called

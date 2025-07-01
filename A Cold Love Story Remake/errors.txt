@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 407: style property s is not known.
-    kerning 10s
-               ^
+File "game/screens.rpy", line 362: expected '=' not found.
+    default persistent.easter_egg_count = 0
+                      ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Mon Jun 30 22:42:09 2025
+Tue Jul  1 15:46:35 2025
