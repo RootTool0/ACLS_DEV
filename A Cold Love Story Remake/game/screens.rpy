@@ -409,9 +409,10 @@ style main_menu_text:
 
 style main_menu_title:
     properties gui.text_properties("title")
+    xalign None
     text_align 0.0
-    xpos 324
-    ypos 36
+    xpos 90
+    ypos 40
     kerning 14
 
 style main_menu_version:

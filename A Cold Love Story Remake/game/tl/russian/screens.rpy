@@ -254,3 +254,8 @@
     old "Menu"
     new "Меню"
 
+    old "FAN-REMAKE V" + config.version
+    new "ФАН-РЕМЕЙК V" + config.version
+
+    old "A\nCold\nLove\nStory"
+    new "Холодная\nИстория\nЛюбви"

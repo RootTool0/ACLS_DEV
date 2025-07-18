@@ -1,4 +1,4 @@
-﻿translate russian strings:
+translate russian strings:
     old "I sent the text to my friend, Max."
     new "Я отправил сообщение другу Максу."
 
@@ -3343,3 +3343,4 @@
 
     old "Officer"
     new "Офицер"
+
