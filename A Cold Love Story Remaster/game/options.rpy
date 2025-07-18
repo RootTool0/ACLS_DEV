@@ -1,12 +1,12 @@
 ﻿
-define config.name = _("A Cold Love Story Remake")
+define config.name = _("A Cold Love Story Remaster")
 
 define gui.show_name = True
 
 define config.version = "1.1"
 
 define gui.about = _p("""
-Fan remake of the original visual novel 'A Cold Love Story' (2015) by Liam Vickers\n
+Fan remaster of the original visual novel 'A Cold Love Story' (2015) by Liam Vickers\n
 Key improvements:\n
 • Engine updated to Ren'Py 8.3.7\n
 • Completely redesigned interface\n
@@ -21,7 +21,7 @@ Special thanks: You\n
 """)
 
 # define gui.about = _p("""
-# Фанатский ремейк оригинальной визуальной новеллы 'A Cold Love Story' (2015) от Liam Vickers\n
+# Фанатский ремастер оригинальной визуальной новеллы 'A Cold Love Story' (2015) от Liam Vickers\n
 # Основные улучшения:\n
 # • Обновление движка до Ren'Py 8.3.7\n
 # • Полностью переработанный интерфейс\n
@@ -35,7 +35,7 @@ Special thanks: You\n
 # Особая благодарность: Вам\n
 # """)
 
-define build.name = "AColdLoveStoryRemake"
+define build.name = "AColdLoveStoryRemaster"
 define build.version = "1.1"
 
 define config.has_sound = True
@@ -67,7 +67,7 @@ default preferences.text_cps = 0
 
 default preferences.afm_time = 15
 
-define config.save_directory = "AColdLoveStoryRemake-1742831320"
+define config.save_directory = "AColdLoveStoryRemaster-1742831320"
 
 define config.window_icon = "gui/window_icon.png"
 define config.default_language = "russian"

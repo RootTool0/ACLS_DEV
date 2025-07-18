@@ -1,9 +1,9 @@
 ﻿translate russian strings:
-    old "A Cold Love Story Remake"
-    new "Холодная История Любви (Ремейк)"
+    old "A Cold Love Story Remaster"
+    new "Холодная История Любви (Ремастер)"
 
     old _p("""
-Fan remake of the original visual novel 'A Cold Love Story' (2015) by Liam Vickers\n
+Fan remaster of the original visual novel 'A Cold Love Story' (2015) by Liam Vickers\n
 Key improvements:\n
 • Engine updated to Ren'Py 8.3.7\n
 • Completely redesigned interface\n
@@ -17,7 +17,7 @@ DISCLAIMER: This is an unofficial project. All rights belong to Liam Vickers\n
 Special thanks: You\n
 """)
     new _p("""
-Фанатский ремейк оригинальной визуальной новеллы 'A Cold Love Story' (2015) от Liam Vickers\n
+Фанатский ремастер оригинальной визуальной новеллы 'A Cold Love Story' (2015) от Liam Vickers\n
 Основные улучшения:\n
 • Обновление движка до Ren'Py 8.3.7\n
 • Полностью переработанный интерфейс\n

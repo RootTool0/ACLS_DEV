@@ -380,7 +380,7 @@ screen main_menu():
         text _("A\nCold\nLove\nStory"):
             style "main_menu_title"
 
-        text _("FAN-REMAKE V") + config.version:
+        text _("FAN-REMASTER V") + config.version:
             style "main_menu_version"
 
     button:
