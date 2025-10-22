@@ -156,67 +156,67 @@
     new "Э. . . что?"
 
     old "I didn't . . . have . . ."
-    new "Я не. . . успела. . ."
+    new "Я не. . . У меня . . ."
 
     old ". . . time . . ."
-    new ". . .подумала. . ."
+    new ". . . Не было времени . . ."
 
     old ". . . I thought . . ."
-    new "*краснеет*"
+    new ". . . Я подумала . . ."
 
     old "*Blushes*"
-    new ". . .может, я. . ."
+    new "*Краснеет*"
 
     old ". . . Maybe I could . . ."
-    new ". . .возьму твою куртку. . ."
+    new ". . . Может, я . . ."
 
     old ". . . Use your coat . . ."
-    new "Что? Конечно, Сара!"
+    new ". . .Возьму твою куртку. . ."
 
     old "What? Of course, Sarah!"
-    new "Джон переживает за меня! Я так счастлива!"
+    new "Что? Конечно, Сара!"
 
     old "I must have simply forgotten . . ."
     new ". . .подумала. . ."
 
     old "What?! Of course, Sarah!"
-    new "Ты спятила! Держи!"
+    new "Что?! Конечно, Сара!"
 
     old "You're crazy! Please take this!"
-    new "Ты такой милый. . ."
+    new "Ты спятила! Держи!"
 
     old "You're too sweet . . ."
-    new ". . .спасибо."
+    new "Ты такой милый. . ."
 
     old ". . . Thank you."
-    new ". . . . . . . . .э-э. . ."
+    new ". . .спасибо."
 
     old ". . . . . . . uh . . . ."
-    new ". . .не за что. . ."
+    new ". . . . . . . . .э-э. . ."
 
     old ". . . Sure . . ."
-    new "Рад помочь, Сара, но что на тебя нашло?"
+    new ". . .Не за что. . ."
 
     old "Happy to help, Sarah, but what has gotten into you?"
-    new "Автобус уже серьёзно опаздывает, может, вообще не приедет!"
+    new "Рад помочь, Сара, но что на тебя нашло?"
 
     old "The bus is already really late, it might not be coming at all!"
-    new "У тебя был куча времени взять куртку!"
+    new "Автобус уже серьёзно опаздывает, может, вообще не приедет!"
 
     old "You had plenty of time to get a coat!"
-    new "Нет. . ."
+    new "У тебя был куча времени взять куртку!"
 
     old "No . . ."
-    new ". . .я хотела. . ."
+    new "Нет. . ."
 
     old ". . . I wanted . . ."
-    new ". . .взять твою."
+    new ". . .я хотела. . ."
 
     old ". . . to use your coat."
-    new ". . .куртку. . ."
+    new ". . .взять твою куртку."
 
     old ". . . . . . . . . ."
-    new ". . . . . . . . ."
+    new ". . . . . . . . . ."
 
     old ". . . Um . . . er . . ."
     new ". . .э-э. . ."
@@ -723,10 +723,10 @@
     new "САРА!"
 
     old "We're not going anywhere until you fucking explain yourself!"
-    new "Мы никуда не идём, пока ты, чёрт возьми, не объяснишься!"
+    new "Мы никуда не пойдём, пока ты, чёрт возьми, не объяснишься!"
 
     old "You're acting like a psycho!"
-    new "Ты ведёшь себя как психопатка!"
+    new "Ты ведёшь себя как сумасшедшая!"
 
     old "I'm about to call the police!"
     new "Я сейчас вызову полицию!"
@@ -1353,7 +1353,7 @@
     new "Почему ты знаешь, где я живу?!"
 
     old "WHY ARE YOU ACTING SO INSANE?!"
-    new "ПОЧЕМУ ТЫ ВЕДЕШЬ СЕБЯ КАК БЕЗУМНАЯ?!"
+    new "ПОЧЕМУ ТЫ ВЕДЕШЬ СЕБЯ КАК СУМАСШЕДШАЯ?!"
 
     old "I took a few long breaths and tried to calm myself down."
     new "Я сделал несколько глубоких вдохов, пытаясь успокоиться."
@@ -3081,7 +3081,7 @@
     new "Просто отвернись и подожди, пока она подойдёт"
 
     old "Didn't you say it's a 20 minute walk from your house to the bus stop?!"
-    new "Разве ты не говорил, что от твоего дома до автобусной остановки 20 минут пешком?!"
+    new "Разве ты не говорила, что от твоего дома до автобусной остановки 20 минут пешком?!"
 
     old "Did you not have time to grab a coat?!"
     new "Не было времени взять пальто?!"
@@ -3177,7 +3177,7 @@
     new "Откажись"
 
     old "WHAT?! If you're going to be such a psycho, then yes!"
-    new "ЧТО?! Если ты будешь такой психом, тогда да!"
+    new "ЧТО?! Если ты будешь себя вести как сумасшедшая, то да!"
 
     old "No! Of course not!"
     new "Нет! Конечно нет!"

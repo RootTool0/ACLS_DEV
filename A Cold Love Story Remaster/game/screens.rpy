@@ -9,10 +9,15 @@ init offset = -1
 ## Styles
 ################################################################################
 
+transform fade_in_out:
+    alpha 0.0
+    linear 0.2 alpha 1.0
+    on hide:
+        linear 0.2 alpha 0.0
+
 style default:
     properties gui.text_properties()
     language gui.language
-
 
 style input:
     properties gui.text_properties("input", accent=True)
@@ -297,7 +302,7 @@ screen navigation():
 
         if main_menu:
             
-            textbutton _("Start") action Start()
+            textbutton _("Start") action Show("game_selector")
             
         else:
 
@@ -357,6 +362,140 @@ style navigation_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
+screen game_selector():
+    modal True
+    zorder 100
+
+    add "#00000088":
+        at fade_in_out
+
+    # Заголовок
+    text "Choose the game":
+        style "main_menu_title"
+        xalign 0.5
+        ypos 100
+
+
+    # Сетка с играми
+    grid 2 2:  # 2 колонки, 2 строки
+        style_prefix "game_selector"
+
+        xalign 0.5
+        yalign 0.5
+        spacing 50
+        
+        # Игра 1
+        button:
+            text "Play Visual Novel":
+                style "navigation_button_text"
+            action Start()
+        
+        # Игра 2
+        button:
+            text "Read ACLS Reload":
+                style "navigation_button_text"
+            action [Hide("game_selector"), Hide("main_menu"), Show("story_viewer", story_file="ACLS_Reload")]
+        
+        # Игра 3
+        button:
+            text "Read ACLS Retold [[1/2]":
+                style "navigation_button_text"            
+            action [Hide("game_selector"), Hide("main_menu"), Show("story_viewer", story_file="ACLS_Retold_1")]
+        
+        # Игра 4
+        button:
+            style "game_selector_button"
+            text "Read ACLS Retold [[2/2]":
+                style "navigation_button_text"
+            action [Hide("game_selector"), Hide("main_menu"), Show("story_viewer", story_file="ACLS_Retold_2")]
+    
+    # Кнопка назад
+    textbutton _("Return"):
+        style "return_button"
+        xalign 0.5
+        yalign 0.95
+        action Hide("game_selector")
+
+style game_selector_button is navigation_button
+
+style game_selector_button:
+    background Transform("gui/button_start/button_start_idle.png", xysize=(670, 80))
+    hover_background Transform("gui/button_start/button_start_hover.png", xysize=(670, 80))
+    xysize (670, 80)
+
+######################################
+
+init python:
+    def read_text_file(filename):
+        suffix = "RU" if _preferences.language == "russian" else "EN"
+        path = "stories/" + filename + "_" + suffix + ".txt"
+        try:
+            with renpy.file(path) as f:
+                return f.read().decode("utf-8").replace('\r', '')
+        except Exception as e:
+            return "Файл не найден или ошибка чтения: " + path + "\n" + str(e)
+
+screen story_viewer(story_file):
+    modal True
+    zorder 10
+    
+    default story_text = read_text_file(story_file)
+
+    add gui.read_menu_background:
+        at fade_in_out
+        xysize (1920, 1080)
+    
+    add "#00000088":
+        at fade_in_out
+    
+    # Контейнер для текста
+    frame:
+        style "story_viewport_frame"
+        
+        viewport:
+            scrollbars "vertical"
+
+            mousewheel True
+            draggable True
+            
+            text story_text substitute False:
+                style "story_viewer_text"
+                layout "subtitle"
+    
+    # Кнопка назад слева снизу
+    textbutton _("Return"):
+        style "return_button"
+        xalign 1.0
+        yalign 0.0
+        xoffset -20
+        yoffset 20
+        action [Hide("story_viewer"), Show("main_menu")]
+
+style story_viewport_frame:
+    #xanchor 1.0
+    #xsize 0.9
+    xalign 0.5
+    xsize 0.98
+
+    yanchor 1.0
+    ypos 1.0
+    ysize renpy.config.screen_height - (76+20+20)
+
+    background None
+
+style story_viewer_text:
+    size 26
+    color "#fff"
+    outlines [(2, "#000", 0, 0)]
+    text_align 0.0
+    xalign 0.5
+    yalign 0.0
+    line_spacing 10
+
+######################################
+
+default easter_egg_click_count = 0
+
 screen main_menu():
     ## This ensures that any other menu screen is replaced.
 
@@ -376,7 +515,6 @@ screen main_menu():
     use navigation
 
     if gui.show_name:
-
         text _("A\nCold\nLove\nStory"):
             style "main_menu_title"
 
@@ -387,8 +525,13 @@ screen main_menu():
         xysize (400, 400)
         pos (1100, 200)
         background "#0000"
-        action Show("easter_egg")
+        action If(easter_egg_click_count >= 14, Show("easter_egg"), Function(increment_click))
         hover_sound None
+
+init python:
+    def increment_click():
+        global easter_egg_click_count
+        easter_egg_click_count += 1
 
 
 style main_menu_frame is empty
@@ -429,17 +572,11 @@ screen easter_egg():
     add "#0008":
         at fade_in_out
     
-    # Воспроизводим видео
     add Movie(size=(600, 600), pos=(1000, 100), play="video/easter_egg.webm", loop=True)
 
-    # Автоматическое закрытие через 1.5 секунды
-    timer 0.4 action Hide("easter_egg")
+    timer 6.0 action Hide("easter_egg")
 
-transform fade_in_out:
-    alpha 0.0
-    linear 0.2 alpha 1.0
-    on hide:
-        linear 0.2 alpha 0.0
+
 ## Game Menu screen ############################################################
 ##
 ## This lays out the basic common structure of a game menu screen. It's called
@@ -769,7 +906,6 @@ screen preferences():
     tag menu
 
     use game_menu(_("Preferences"), scroll="viewport"):
-
         vbox:
             hbox:
                 box_wrap True

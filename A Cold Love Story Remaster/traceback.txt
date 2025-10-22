@@ -1,64 +1,42 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/screens.rpy", line 425, in execute
-    screen easter_egg():
-  File "game/screens.rpy", line 425, in execute
-    screen easter_egg():
-  File "game/screens.rpy", line 429, in execute
-    add "#0008":
-  File "game/screens.rpy", line 429, in keywords
-    add "#0008":
-  File "game/screens.rpy", line 430, in <module>
-    at fade_in_out
-NameError: name 'fade_in_out' is not defined
+  File "renpy/common/00start.rpy", line 219, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 551, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 551, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 565, in _execute_python_hide
+    renpy.load(renpy.session["_reload_slot"])
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+  File "renpy/common/00start.rpy", line 219, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 551, in script
     python hide:
   File "D:\renpy-8.3.7\renpy\ast.py", line 834, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "D:\renpy-8.3.7\renpy\python.py", line 1187, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+  File "renpy/common/00keymap.rpy", line 551, in <module>
     python hide:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
-    ui.interact()
-  File "D:\renpy-8.3.7\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "D:\renpy-8.3.7\renpy\display\core.py", line 2218, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "D:\renpy-8.3.7\renpy\display\core.py", line 2748, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "D:\renpy-8.3.7\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\renpy-8.3.7\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\renpy-8.3.7\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\renpy-8.3.7\renpy\display\screen.py", line 480, in visit_all
-    callback(self)
-  File "D:\renpy-8.3.7\renpy\display\core.py", line 2748, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "D:\renpy-8.3.7\renpy\display\screen.py", line 491, in per_interact
-    self.update()
-  File "D:\renpy-8.3.7\renpy\display\screen.py", line 700, in update
-    self.screen.function(**self.scope)
-  File "game/screens.rpy", line 425, in execute
-    screen easter_egg():
-  File "game/screens.rpy", line 425, in execute
-    screen easter_egg():
-  File "game/screens.rpy", line 429, in execute
-    add "#0008":
-  File "game/screens.rpy", line 429, in keywords
-    add "#0008":
-  File "game/screens.rpy", line 430, in <module>
-    at fade_in_out
-NameError: name 'fade_in_out' is not defined
+  File "renpy/common/00keymap.rpy", line 565, in _execute_python_hide
+    renpy.load(renpy.session["_reload_slot"])
+  File "D:\renpy-8.3.7\renpy\loadsave.py", line 838, in load
+    log.unfreeze(roots, label="_after_load")
+  File "D:\renpy-8.3.7\renpy\rollback.py", line 1134, in unfreeze
+    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
+  File "D:\renpy-8.3.7\renpy\rollback.py", line 930, in rollback
+    self.load_failed()
+  File "D:\renpy-8.3.7\renpy\rollback.py", line 848, in load_failed
+    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.7.25031702
-A Cold Love Story Remake 1.1
-Tue Jul  1 16:08:33 2025
+A Cold Love Story Remaster 1.2
+Wed Oct 22 01:11:47 2025

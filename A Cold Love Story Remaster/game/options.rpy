@@ -3,7 +3,7 @@ define config.name = _("A Cold Love Story Remaster")
 
 define gui.show_name = True
 
-define config.version = "1.1"
+define config.version = "1.2"
 
 define gui.about = _p("""
 Fan remaster of the original visual novel 'A Cold Love Story' (2015) by Liam Vickers\n
@@ -36,7 +36,7 @@ Special thanks: You\n
 # """)
 
 define build.name = "AColdLoveStoryRemaster"
-define build.version = "1.1"
+define build.version = "1.2"
 
 define config.has_sound = True
 define config.has_music = True
@@ -102,6 +102,7 @@ init python:
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
+    build.classify('stories/**', "stories")
 
     build.documentation('*.html')
     build.documentation('*.txt')

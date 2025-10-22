@@ -2,7 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/tl/russian/screens.rpy", line 259: Tab characters are not allowed in Ren'Py scripts.
+File "game/screens.rpy", line 530: 'init' is not a keyword argument or valid child of the screen statement.
+    init python:
+        ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Fri Jul 18 14:46:38 2025
+Wed Oct 22 01:11:31 2025

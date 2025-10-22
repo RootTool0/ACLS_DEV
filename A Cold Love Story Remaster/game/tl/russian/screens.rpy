@@ -259,3 +259,20 @@
 
     old "A\nCold\nLove\nStory"
     new "Холодная\nИстория\nЛюбви"
+
+    old "Choose the game"
+    new "Выберите игру"
+    
+    old "Play Visual Novel"
+    new "Играть в визуальную новеллу"
+
+    old "Read ACLS Reload"
+    new "Читать перезапуск ХИЛ"
+
+    old "Read ACLS Retold [[1/2]"
+    new "Читать пересказ ХИЛ [[1/2]"
+
+    old "Read ACLS Retold [[2/2]"
+    new "Читать пересказ ХИЛ [[2/2]"
+
+    

@@ -88,6 +88,7 @@ define gui.title_text_size = 80
 
 ## The images used for the main and game menus.
 define gui.main_menu_background = Movie(play = "video/Sarah2 Coatfinal.mp4", loop = True, size = (1920, 1080), faded = 1.5)
+define gui.read_menu_background = Movie(play = "video/Houseextfinal.mp4", loop = True, size = (1920, 1080), faded = 1.5)
 define gui.game_menu_background = "gui/game_menu.png"
 
 ## Dialogue ####################################################################

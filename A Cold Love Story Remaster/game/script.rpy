@@ -335,7 +335,7 @@ label coat:
 
     e "You're telling me you intentionally left your coat behind?"
 
-    e " . . . just so you could use mine?"
+    e ". . . just so you could use mine?"
 
     e ". . . why?"
 
@@ -835,7 +835,7 @@ label pushback:
 
             e "We'll freeze to death."
 
-            e " . . . It makes me nervous, but if you really want to come over . . ."
+            e ". . . It makes me nervous, but if you really want to come over . . ."
 
             jump your_house
 
@@ -885,7 +885,7 @@ label pushback:
 
                     e ". . . We can't stay out here forever . . ."
 
-                    e " . . . It makes me nervous, but if you really want to come over . . ."
+                    e ". . . It makes me nervous, but if you really want to come over . . ."
 
                     jump your_house
 
@@ -975,7 +975,7 @@ label careful:
 
             e "We'll freeze to death."
 
-            e " . . . It makes me nervous, but if you really want to come over . . ."
+            e ". . . It makes me nervous, but if you really want to come over . . ."
 
             jump your_house
 
@@ -1019,7 +1019,7 @@ label careful:
 
                     e "We'll freeze to death."
 
-                    e " . . . It makes me nervous, but if you really want to come over . . ."
+                    e ". . . It makes me nervous, but if you really want to come over . . ."
 
                     jump your_house
 
@@ -1331,7 +1331,7 @@ label message:
 
     "I slowly wiggled the phone from my pocket with my left hand, as my right was still in Sarah's vice grip."
 
-    "I was still walking as I brought the phone up when I was suddenly jerked back, almost losing my balance on the slick ice. "
+    "I was still walking as I brought the phone up when I was suddenly jerked back, almost losing my balance on the slick ice."
 
     hide movie
     stop movie
@@ -1942,7 +1942,7 @@ label nevermind:
 
     "It felt like . . . a window had been left open . . ."
 
-    " . . . Now that I thought about it, I remembered my room being freezing that morning as well . . ."
+    ". . . Now that I thought about it, I remembered my room being freezing that morning as well . . ."
 
     ". . . and really quite drafty for the past week . . ."
 
@@ -2034,7 +2034,7 @@ label kitchen:
 
             ". . . . . . . . ."
 
-            ". . . no response . . . "
+            ". . . no response . . ."
 
             menu:
 
@@ -2711,7 +2711,7 @@ label go:
 
     "Her form dissapeared into the frozen wasteland, slamming the door behind her."
 
-    "I sat stunned for a good minute. "
+    "I sat stunned for a good minute."
 
     "Where the hell did that come from?"
 
