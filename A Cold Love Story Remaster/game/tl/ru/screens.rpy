@@ -1,4 +1,4 @@
-﻿translate russian strings:
+﻿translate ru strings:
     old "Back"
     new "Назад"
 

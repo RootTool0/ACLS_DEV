@@ -1,6 +1,4 @@
-﻿# TODO: Translation updated at 2025-03-24 19:29
-
-translate russian strings:
+﻿translate ru strings:
     # renpy/common/00accessibility.rpy:28
     old "Self-voicing disabled."
     new "Озвучивание отключено."

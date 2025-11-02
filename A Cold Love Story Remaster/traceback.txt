@@ -1,42 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "renpy/common/00start.rpy", line 219, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 551, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 551, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 565, in _execute_python_hide
-    renpy.load(renpy.session["_reload_slot"])
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+While parsing C:\Users\RootTool\Documents\GitHub\Clones\ACLS_DEV\A Cold Love Story Remaster\game/options.rpy.
+  File "game/options.rpy", line 24, in <module>
+    define config.version = build.version
+AttributeError: 'StoreModule' object has no attribute 'version'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 219, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 551, in script
-    python hide:
-  File "D:\renpy-8.3.7\renpy\ast.py", line 834, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\renpy-8.3.7\renpy\python.py", line 1187, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00keymap.rpy", line 551, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 565, in _execute_python_hide
-    renpy.load(renpy.session["_reload_slot"])
-  File "D:\renpy-8.3.7\renpy\loadsave.py", line 838, in load
-    log.unfreeze(roots, label="_after_load")
-  File "D:\renpy-8.3.7\renpy\rollback.py", line 1134, in unfreeze
-    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
-  File "D:\renpy-8.3.7\renpy\rollback.py", line 930, in rollback
-    self.load_failed()
-  File "D:\renpy-8.3.7\renpy\rollback.py", line 848, in load_failed
-    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+  File "D:\renpy-8.3.7\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "D:\renpy-8.3.7\renpy\main.py", line 470, in main
+    renpy.game.script.load_script() # sets renpy.game.script.
+  File "D:\renpy-8.3.7\renpy\script.py", line 359, in load_script
+    self.load_appropriate_file(".rpyc", [ "_ren.py", ".rpy" ], dir, fn, initcode)
+  File "D:\renpy-8.3.7\renpy\script.py", line 957, in load_appropriate_file
+    self.finish_load(stmts, initcode, filename=lastfn) # type: ignore
+  File "D:\renpy-8.3.7\renpy\script.py", line 602, in finish_load
+    node.early_execute()
+  File "D:\renpy-8.3.7\renpy\ast.py", line 2228, in early_execute
+    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "D:\renpy-8.3.7\renpy\python.py", line 1211, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/options.rpy", line 24, in <module>
+    define config.version = build.version
+AttributeError: 'StoreModule' object has no attribute 'version'
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.7.25031702
-A Cold Love Story Remaster 1.2
-Wed Oct 22 01:11:47 2025
+A Cold Love Story Remaster 
+Sun Nov  2 16:32:15 2025

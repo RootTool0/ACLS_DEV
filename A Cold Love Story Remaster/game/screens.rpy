@@ -392,9 +392,9 @@ screen game_selector():
         
         # Игра 2
         button:
-            text "Read ACLS Reload":
+            text "Read ACLS Reboot":
                 style "navigation_button_text"
-            action [Hide("game_selector"), Hide("main_menu"), Show("story_viewer", story_file="ACLS_Reload")]
+            action [Hide("game_selector"), Hide("main_menu"), Show("story_viewer", story_file="ACLS_Reboot")]
         
         # Игра 3
         button:
@@ -427,13 +427,12 @@ style game_selector_button:
 
 init python:
     def read_text_file(filename):
-        suffix = "RU" if _preferences.language == "russian" else "EN"
-        path = "stories/" + filename + "_" + suffix + ".txt"
+        path = "stories/" + _preferences.language + "/" + filename + ".txt"
         try:
             with renpy.file(path) as f:
                 return f.read().decode("utf-8").replace('\r', '')
         except Exception as e:
-            return "Файл не найден или ошибка чтения: " + path + "\n" + str(e)
+            return "File not found or read error: " + path + "\n" + str(e)
 
 screen story_viewer(story_file):
     modal True
@@ -518,7 +517,7 @@ screen main_menu():
         text _("A\nCold\nLove\nStory"):
             style "main_menu_title"
 
-        text _("FAN-REMASTER V") + config.version:
+        text _("FAN-REMASTER V") + build.version:
             style "main_menu_version"
 
     button:
@@ -731,7 +730,7 @@ screen about():
         vbox:
 
             label "[config.name!t]"
-            text _("Version [config.version!t]\n")
+            text _("Version [build.version!t]\n")
 
             ## gui.about is usually set in options.rpy.
             if gui.about:
@@ -991,7 +990,12 @@ screen preferences():
                     text_style "language_button_text"
 
                 textbutton _("Русский"):
-                    action Function(set_language, "russian")
+                    action Function(set_language, "ru")
+                    style "language_button"
+                    text_style "language_button_text"
+                
+                textbutton _("Português Brasileiro"):
+                    action Function(set_language, "pt_br")
                     style "language_button"
                     text_style "language_button_text"
 

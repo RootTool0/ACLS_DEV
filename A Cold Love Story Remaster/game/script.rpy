@@ -429,7 +429,7 @@ label joking:
 
     $ renpy.sound.play("SmileSpook.mp3", channel = 3)
 
-    $ renpy.movie_cutscene("Sarah8crazysmilefinal.mp4", delay=None, loops=0, stop_music=False)
+    $ renpy.movie_cutscene("video/Sarah8crazysmilefinal.mp4", delay=None, loops=0, stop_music=False)
 
     play movie "video/Sarah2 Smilefinal.mp4" loop
     show movie with dissolve
@@ -3367,7 +3367,7 @@ label frontdoorspook:
 
     $ renpy.sound.play("WindowSpookSound.mp3", channel = 3)
 
-    $ renpy.movie_cutscene("Windowspookfinal.mp4", delay=None, loops=0, stop_music=False)
+    $ renpy.movie_cutscene("video/Windowspookfinal.mp4", delay=None, loops=0, stop_music=False)
 
     play movie "video/Windowfinal.mp4" loop
     show movie
@@ -3451,7 +3451,7 @@ label goinside:
     hide movie with fade
     stop movie
 
-    play movie "video/Entrywayfinal.mp4." loop
+    play movie "video/Entrywayfinal.mp4" loop
     show movie with fade
 
     e ". . . S- . . ."
@@ -3487,7 +3487,7 @@ label goinside:
 
     $ renpy.sound.play("BodyStairs.mp3", channel = 3)
 
-    $ renpy.movie_cutscene("Bodystairs.mp4", delay=None, loops=0, stop_music=False)
+    $ renpy.movie_cutscene("video/Bodystairs.mp4", delay=None, loops=0, stop_music=False)
 
     play movie "video/Sarah9final.mp4" loop
     show movie
