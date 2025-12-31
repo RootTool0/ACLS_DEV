@@ -13,6 +13,7 @@ Authors:\n
 • RootTool - (Programmer) - ported the original game to the new engine version, adapted builds for Windows and Android devices\n
 • At0m - (UI Designer) - designed the main menu\n
 • Ponder_Static - (Translator) - translated the original novel into Russian\n
+• Nucita - (Translator) - translated the original novel into Brazilian Portuguese\n
 DISCLAIMER: This is an unofficial project. All rights belong to Liam Vickers\n
 Special thanks: You\n
 """)
